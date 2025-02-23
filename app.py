@@ -1,7 +1,10 @@
 # app.py
 from flask import Flask, request, jsonify
 from database import create_paste, get_paste
+from flask_cors import CORS
 
+
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000", "https://pasteit.vercel.app"}})
 app = Flask(__name__)
 
 @app.route('/api/paste', methods=['POST'])
@@ -10,7 +13,7 @@ def create_paste_route():
     if not content:
         return jsonify({'error': 'No content provided'}), 400
     paste_id = create_paste(content)
-    url = f"http://localhost:5000/api/paste/{paste_id}"  # Update this for production
+    url = f"https://pastebin-7j39.onrender.com/api/paste/{paste_id}"  # Update this for production
     return jsonify({'url': url}), 201
 
 @app.route('/api/paste/<paste_id>', methods=['GET'])
