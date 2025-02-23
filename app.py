@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 allowed_origins = [
     "http://localhost:3000",
-    "https://pasteit.vercel.app"
+    "https://pasteit-mauve.vercel.app"
 ]
 
 
