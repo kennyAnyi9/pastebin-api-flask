@@ -3,8 +3,12 @@ from flask import Flask, request, jsonify
 from database import create_paste, get_paste
 from flask_cors import CORS
 
+allowed_origins = [
+    "http://localhost:3000",
+    "https://pasteit.vercel.app"
+]
 
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000", "https://pasteit.vercel.app"}})
+CORS(app, resources={r"/api/*": {"origins": allowed_origins}})
 app = Flask(__name__)
 
 @app.route('/api/paste', methods=['POST'])
