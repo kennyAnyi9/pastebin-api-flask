@@ -32,4 +32,4 @@ def get_paste_content(paste_id):
     return jsonify({'error': 'Paste not found'}), 404
 
 if __name__ == '__main__':
-    app.run()  # FLASK_ENV in .flaskenv will handle debug mode
+    app.run()  
