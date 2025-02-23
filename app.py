@@ -11,7 +11,7 @@ allowed_origins = [
     "http://localhost:3000",
     "https://pasteit-mauve.vercel.app/"
     "https://www.pasteit-mauve.vercel.app/",
-    "https://pasteit-mauve.vercel.app"
+    "https://pasteit-mauve.vercel.app",
     "https://www.pasteit-mauve.vercel.app"
 ]
 
