@@ -8,6 +8,8 @@ allowed_origins = [
     "http://localhost:3000",
     "https://pasteit-mauve.vercel.app",
     "https://www.pasteit-mauve.vercel.app"
+    "https://pastebin.kennyanyi.xyz"
+    "https://www.pastebin.kennyanyi.xyz"
 ]
 CORS(app, resources={r"/api/*": {"origins": allowed_origins}})
 
